@@ -1,0 +1,137 @@
+{
+  "name": "flashcore-lib",
+  "version": "0.13.22",
+  "description": "A pure and powerful JavaScript Flashcoin library.",
+  "author": {
+    "name": "BitPay",
+    "email": "dev@bitpay.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "gulp lint",
+    "test": "gulp test",
+    "coverage": "gulp coverage",
+    "build": "gulp"
+  },
+  "contributors": [
+    {
+      "name": "wl",
+      "email": "wl@flashcoin.io"
+    },
+    {
+      "name": "Daniel Cousens",
+      "email": "bitcoin@dcousens.com"
+    },
+    {
+      "name": "Esteban Ordano",
+      "email": "eordano@gmail.com"
+    },
+    {
+      "name": "Gordon Hall",
+      "email": "gordon@bitpay.com"
+    },
+    {
+      "name": "Jeff Garzik",
+      "email": "jgarzik@bitpay.com"
+    },
+    {
+      "name": "Kyle Drake",
+      "email": "kyle@kyledrake.net"
+    },
+    {
+      "name": "Manuel Araoz",
+      "email": "manuelaraoz@gmail.com"
+    },
+    {
+      "name": "Matias Alejo Garcia",
+      "email": "ematiu@gmail.com"
+    },
+    {
+      "name": "Ryan X. Charles",
+      "email": "ryanxcharles@gmail.com"
+    },
+    {
+      "name": "Stefan Thomas",
+      "email": "moon@justmoon.net"
+    },
+    {
+      "name": "Stephen Pair",
+      "email": "stephen@bitpay.com"
+    },
+    {
+      "name": "Wei Lu",
+      "email": "luwei.here@gmail.com"
+    }
+  ],
+  "keywords": [
+    "flashcoin",
+    "bitcoin",
+    "transaction",
+    "address",
+    "p2p",
+    "ecies",
+    "cryptocurrency",
+    "blockchain",
+    "payment",
+    "bip21",
+    "bip32",
+    "bip37",
+    "bip69",
+    "bip70",
+    "multisig"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flashcoin-project/flashcore-lib.git"
+  },
+  "browser": {
+    "request": "browser-request"
+  },
+  "dependencies": {
+    "bn.js": "=2.0.4",
+    "bs58": "=2.0.0",
+    "buffer-compare": "=1.0.0",
+    "elliptic": "=3.0.3",
+    "inherits": "=2.0.1",
+    "lodash": "=3.10.1",
+    "scryptsy": "=2.0.0"
+  },
+  "devDependencies": {
+    "brfs": "^1.2.0",
+    "chai": "^1.10.0",
+    "gulp": "^3.9.1",
+    "flashcore-build": "github:flashcoin-project/flashcore-build",
+    "sinon": "^1.13.0"
+  },
+  "license": "MIT",
+  "gitHead": "9c3b2712de14335d2a953a8772aee87e23be6cf6",
+  "bugs": {
+    "url": "https://github.com/flashcoin-project/flashcore-lib/issues"
+  },
+  "homepage": "https://github.com/flashcoin-project/flashcore-lib#readme",
+  "_id": "flashcore-lib@0.13.22",
+  "_shasum": "7d7406be67582ee5fdf2ac0004ea6ad1d1d0d3f0",
+  "_from": "flashcore-lib@>=0.13.22 <0.14.0",
+  "_npmVersion": "4.1.2",
+  "_nodeVersion": "7.7.4",
+  "_npmUser": {
+    "name": "losh11",
+    "email": "loshan1212@gmail.com"
+  },
+  "dist": {
+    "shasum": "7d7406be67582ee5fdf2ac0004ea6ad1d1d0d3f0",
+    "tarball": "https://registry.npmjs.org/flashcore-lib/-/flashcore-lib-0.13.22.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "wl",
+      "email": "wl@flashcoin.io"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/flashcore-lib-0.13.22.tgz_1494468460219_0.5664216130971909"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/flashcore-lib/-/flashcore-lib-0.13.22.tgz"
+}
