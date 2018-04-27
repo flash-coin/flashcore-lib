@@ -102,36 +102,5 @@
     "gulp": "^3.9.1",
     "flashcore-build": "github:flashcoin-project/flashcore-build",
     "sinon": "^1.13.0"
-  },
-  "license": "MIT",
-  "gitHead": "9c3b2712de14335d2a953a8772aee87e23be6cf6",
-  "bugs": {
-    "url": "https://github.com/flashcoin-project/flashcore-lib/issues"
-  },
-  "homepage": "https://github.com/flashcoin-project/flashcore-lib#readme",
-  "_id": "flashcore-lib@0.13.22",
-  "_shasum": "7d7406be67582ee5fdf2ac0004ea6ad1d1d0d3f0",
-  "_from": "flashcore-lib@>=0.13.22 <0.14.0",
-  "_npmVersion": "4.1.2",
-  "_nodeVersion": "7.7.4",
-  "_npmUser": {
-    "name": "losh11",
-    "email": "loshan1212@gmail.com"
-  },
-  "dist": {
-    "shasum": "7d7406be67582ee5fdf2ac0004ea6ad1d1d0d3f0",
-    "tarball": "https://registry.npmjs.org/flashcore-lib/-/flashcore-lib-0.13.22.tgz"
-  },
-  "maintainers": [
-    {
-      "name": "wl",
-      "email": "wl@flashcoin.io"
-    }
-  ],
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/flashcore-lib-0.13.22.tgz_1494468460219_0.5664216130971909"
-  },
-  "directories": {},
-  "_resolved": "https://registry.npmjs.org/flashcore-lib/-/flashcore-lib-0.13.22.tgz"
+  }
 }
