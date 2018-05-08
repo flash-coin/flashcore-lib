@@ -191,7 +191,7 @@ describe('BufferReader', function() {
     });
 
     it('should return 10BTC', function() {
-      var tenbtc = 10 * 1e8;
+      var tenbtc = 10 * 1e10;
       var tenbtcBuffer = new Buffer('00ca9a3b00000000', 'hex');
       var br = new BufferReader(tenbtcBuffer);
       br.readUInt64LEBN().toNumber().should.equal(tenbtc);
@@ -213,7 +213,7 @@ describe('BufferReader', function() {
     });
 
     it('should return max number of satoshis', function() {
-      var maxSatoshis = 21000000 * 1e8;
+      var maxSatoshis = 21000000 * 1e10;
       var maxSatoshisBuffer = new Buffer('0040075af0750700', 'hex');
       var br = new BufferReader(maxSatoshisBuffer);
       br.readUInt64LEBN().toNumber().should.equal(maxSatoshis);

@@ -231,7 +231,7 @@ describe('Transaction', function() {
     txId: 'a477af6b2667c29670467e4e0728b685ee07b240235771862318e29ddbe58458',
     outputIndex: 1,
     script: Script.buildPublicKeyHashOut(fromAddress).toString(),
-    satoshis: 1e8
+    satoshis: 1e10
   };
 
   var tenth = 1e7;
@@ -255,7 +255,7 @@ describe('Transaction', function() {
     txId: 'a477af6b2667c29670467e4e0728b685ee07b240235771862318e29ddbe58458',
     outputIndex: 0,
     script: Script(p2shAddress).toString(),
-    satoshis: 1e8
+    satoshis: 1e10
   };
 
   describe('adding inputs', function() {
@@ -1190,7 +1190,7 @@ describe('Transaction', function() {
         var tx = new Transaction()
           .from(simpleUtxoWith1BTC)
           .from(simpleUtxoWith100000Satoshis)
-          .to([{address: toAddress, satoshis: 50000 + 1e8}])
+          .to([{address: toAddress, satoshis: 50000 + 1e10}])
           .fee(15000)
           .change(changeAddress)
           .sign(privateKey);
@@ -1202,7 +1202,7 @@ describe('Transaction', function() {
         var tx = new Transaction()
           .from(simpleUtxoWith1BTC)
           .from(simpleUtxoWith100000Satoshis)
-          .to([{address: toAddress, satoshis: 50000 + 1e8}])
+          .to([{address: toAddress, satoshis: 50000 + 1e10}])
           .fee(15000)
           .change(changeAddress)
           .sign(privateKey);
@@ -1214,7 +1214,7 @@ describe('Transaction', function() {
         var tx = new Transaction()
           .from(simpleUtxoWith1BTC)
           .from(simpleUtxoWith100000Satoshis)
-          .to([{address: toAddress, satoshis: 50000 + 1e8}])
+          .to([{address: toAddress, satoshis: 50000 + 1e10}])
           .fee(15000)
           .change(changeAddress)
           .sign(privateKey);
@@ -1226,7 +1226,7 @@ describe('Transaction', function() {
         var tx = new Transaction()
           .from(simpleUtxoWith1BTC)
           .from(simpleUtxoWith100000Satoshis)
-          .to([{address: toAddress, satoshis: 50000 + 1e8}])
+          .to([{address: toAddress, satoshis: 50000 + 1e10}])
           .fee(15000)
           .change(changeAddress)
           .sign(privateKey);
@@ -1644,7 +1644,7 @@ describe('Transaction', function() {
         txId: '1d732950d99f821b8a8d11972ea56000b0666e4d31fa71861ffd80a83797dc61',
         outputIndex: 1,
         script: Script.buildScriptHashOut(address).toHex(),
-        satoshis: 1e8
+        satoshis: 1e10
       };
       it('will sign with nested p2sh witness program', function() {
         var tx = new Transaction()
