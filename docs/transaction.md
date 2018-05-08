@@ -29,7 +29,7 @@ You can also override the fee estimation with another amount, specified in satos
 
 ```javascript
 var transaction = new Transaction().fee(5430); // Minimum non-dust amount
-var transaction = new Transaction().fee(1e8);  // Generous fee of 1 BTC
+var transaction = new Transaction().fee(1e10);  // Generous fee of 1 BTC
 ```
 
 ## Multisig Transactions
