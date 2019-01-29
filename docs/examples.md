@@ -1,4 +1,4 @@
-# Litecore examples
+# Flashcore examples
 
 ## Generate a random address
 ```javascript
@@ -40,7 +40,7 @@ var transaction = new flashcore.Transaction()
   .sign(privateKey);
 ```
 
-## Sign a Bitcoin message
+## Sign a Flashcoin message
 ```javascript
 var Message = require('flashcore-message');
 
@@ -50,7 +50,7 @@ var message = new Message('This is an example of a signed message.');
 var signature = message.sign(privateKey);
 ```
 
-## Verify a Bitcoin message
+## Verify a Flashcoin message
 ```javascript
 var Message = require('flashcore-message');
 

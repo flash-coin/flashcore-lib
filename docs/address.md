@@ -1,4 +1,4 @@
-# Bitcoin Address
+# Flashcoin Address
 Represents a bitcoin address. Addresses are the most popular way to make bitcoin transactions. See [the official Bitcoin Wiki](https://en.bitcoin.it/wiki/Address) for technical background information.
 
 ## Instantiate an Address
@@ -62,4 +62,4 @@ var error = Address.getValidationError(input, Networks.testnet);
 }
 ```
 
-The errors are listed in the generated file in the [errors folder](https://github.com/flashcoin-project/flashcoree/tree/master/lib/errors). There's a structure to errors defined in the [spec.js file](https://github.com/flashcoin-projectflashcorere/tree/master/lib/errors/spec.js).
+The errors are listed in the generated file in the [errors folder](https://github.com/flash-coin/flashcoree/tree/master/lib/errors). There's a structure to errors defined in the [spec.js file](https://github.com/flash-coin/flashcore/tree/master/lib/errors/spec.js).

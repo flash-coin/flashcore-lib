@@ -1,5 +1,5 @@
 # Transaction
-Litecore provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of flashcoin in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.
+Flashcore provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of flashcoin in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.
 
 A Transaction contains a set of inputs and a set of outputs. Each input contains a reference to another transaction's output, and a signature that allows the value referenced in that output to be used in this transaction.
 
@@ -19,7 +19,7 @@ var transaction = new Transaction()
 
 You can obtain the input and output total amounts of the transaction in satoshis by accessing the fields `inputAmount` and `outputAmount`.
 
-Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the litecoind reference client.
+Now, this could just be serialized to hexadecimal ASCII values (`transaction.serialize()`) and sent over to the Flashcoind reference client.
 
 ```bash
 flashcoin-cli sendrawtransaction <serialized transaction>
@@ -77,7 +77,7 @@ transaction.applySignature(receivedSig);
 ## Adding inputs
 Transaction inputs are instances of either [Input](https://github.com/flashcoin-project/flashcore/tree/master/lib/transaction/input) or its subclasses. `Input` has some abstract methods, as there is no actual concept of a "signed input" in the flashcoin scripting system (just valid signatures for <tt>OP_CHECKSIG</tt> and similar opcodes). They are stored in the `input` property of `Transaction` instances.
 
-Litecore contains two implementations of `Input`, one for spending _Pay to Public Key Hash_ outputs (called `PublicKeyHashInput`) and another to spend _Pay to Script Hash_ outputs for which the redeem script is a Multisig script (called `MultisigScriptHashInput`).
+Flashcore contains two implementations of `Input`, one for spending _Pay to Public Key Hash_ outputs (called `PublicKeyHashInput`) and another to spend _Pay to Script Hash_ outputs for which the redeem script is a Multisig script (called `MultisigScriptHashInput`).
 
 All inputs have the following five properties:
 - `prevTxId`: a `Buffer` with the id of the transaction with the output this input is spending
@@ -94,7 +94,7 @@ Some methods related to adding inputs are:
   - `from(utxos)`: same as above, but passing in an array of Unspent Outputs.
   - `from(utxo, publicKeys, threshold)`: add an input that spends a UTXO with a P2SH output for a Multisig script. The `publicKeys` argument is an array of public keys, and `threshold` is the number of required signatures in the Multisig script.
 
-- `addInput`: Performs a series of checks on an input and appends it to the end of the `input` vector and updates the amount of incoming litecoins of the transaction.
+- `addInput`: Performs a series of checks on an input and appends it to the end of the `input` vector and updates the amount of incoming Flashcoins of the transaction.
 - `uncheckedAddInput`: adds an input to the end of the `input` vector and updates the `inputAmount` without performing any checks.
 
 ### PublicKeyHashInput
@@ -149,7 +149,7 @@ These are the current default values in the flashcore library involved on these 
 - `Transaction.DUST_AMOUNT`: `546` (satoshis)
 
 ## Fee calculation
-When outputs' value don't sum up to the same amount that inputs, the difference in litecoins goes to the miner of the block that includes this transaction. The concept of a "change address" usually is associated with this: an output with an address that can be spent by the creator of the transaction.
+When outputs' value don't sum up to the same amount that inputs, the difference in Flashcoins goes to the miner of the block that includes this transaction. The concept of a "change address" usually is associated with this: an output with an address that can be spent by the creator of the transaction.
 
 For this reason, some methods in the Transaction class are provided:
 - `change(address)`: Set up the change address. This will set an internal `_changeScript` property that will store the change script associated with that address.

@@ -1,5 +1,5 @@
-# Bitcoin URIs
-Represents a flashcoin payment URI. Bitcoin URI strings became the most popular way to share payment request, sometimes as a flashcoin link and others using a QR code.
+# Flashcoin URIs
+Represents a flashcoin payment URI. Flashcoin URI strings became the most popular way to share payment request, sometimes as a flashcoin link and others using a QR code.
 
 URI Examples:
 

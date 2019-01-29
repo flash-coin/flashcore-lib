@@ -1,4 +1,4 @@
-# Bitcore v0.14
+# Flashcore v0.14
 
 ## Principles
 
@@ -17,10 +17,10 @@ To get started, just `npm install flashcore` or `bower install flashcore`.
 
 ## Payment Handling
 * [Using Different Units](unit.md)
-* [Acknowledging and Requesting Payments: Bitcoin URIs](uri.md)
+* [Acknowledging and Requesting Payments: Flashcoin URIs](uri.md)
 * [The Transaction Class](transaction.md)
 
-## Bitcoin Internals
+## Flashcoin Internals
 * [Scripts](script.md)
 * [Block](block.md)
 
@@ -35,14 +35,14 @@ To get started, just `npm install flashcore` or `bower install flashcore`.
 
 Some functionality is implemented as a module that can be installed separately:
 
-* [Payment Protocol Support](https://github.com/bitpay/bitcore-payment-protocol)
+* [Payment Protocol Support](https://github.com/flash-coin/flashcore-payment-protocol)
 * [Peer to Peer Networking](https://github.com/flashcoin-project/flashcore-p2p)
-* [Bitcoin Core JSON-RPC](https://github.com/bitpay/bitcoind-rpc)
-* [Payment Channels](https://github.com/bitpay/bitcore-channel)
-* [Mnemonics](https://github.com/bitpay/bitcore-mnemonic)
-* [Elliptical Curve Integrated Encryption Scheme](https://github.com/bitpay/bitcore-ecies)
-* [Blockchain Explorers](https://github.com/bitpay/bitcore-explorers)
-* [Signed Messages](https://github.com/bitpay/bitcore-message)
+* [Flashcoin Core JSON-RPC](https://github.com/flash-coin/flashcoind-rpc)
+* [Payment Channels](https://github.com/flash-coin/flashcore-channel)
+* [Mnemonics](https://github.com/flash-coin/flashcore-mnemonic)
+* [Elliptical Curve Integrated Encryption Scheme](https://github.com/flash-coin/flashcore-ecies)
+* [Blockchain Explorers](https://github.com/flash-coin/flashcore-explorers)
+* [Signed Messages](https://github.com/flash-coin/flashcore-message)
 
 # Examples
 
