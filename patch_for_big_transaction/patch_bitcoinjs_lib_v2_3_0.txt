@@ -1,0 +1,30 @@
+This is patch for sending transaction with big big amount
+
+BitcoinJs-Lib version 2.3.0
+#command:
+cp -R patch_big_transaction flashcoin/
+
+#patch 1: flashcoin.io/jspm_packages/npm/bitcoinjs-lib@2.3.0/src/bufferutils.js 
+{
+line 60:
+  //verifuint(b + a, 0x001fffffffffffff)
+  verifuint(b + a, 0x7fffffffffffffff)
+...
+line 124:
+  //verifuint(b + a, 0x001fffffffffffff)
+  verifuint(b + a, 0x7fffffffffffffff)
+}
+
+#patch 2: flashcoin.io/jspm_packages/npm/bitcoinjs-lib@2.3.0/src/types.js
+{
+line 14:
+	//var UINT53_MAX = Math.pow(2, 53) - 1
+	var UINT53_MAX = Math.pow(2, 63) - 1
+}
+
+#patch 3: flashcoin.io/jspm_packages/npm/typeforce@1.9.1/extra.js
+{
+line 33:
+	//var UINT53_MAX = Math.pow(2, 53) - 1
+	var UINT53_MAX = Math.pow(2, 63) - 1
+}

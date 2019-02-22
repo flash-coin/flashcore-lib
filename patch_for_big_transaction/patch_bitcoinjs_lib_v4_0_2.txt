@@ -1,0 +1,30 @@
+This is patch for sending transaction with big big amount
+
+bitcoinjs-lib (version: 4.0.2)
+
+-------
+
+#patch 1: bitcoinjs-lib@4.0.2/src/bufferutils.js 
+{
+line 14:
+  //verifuint(b + a, 0x001fffffffffffff)
+  verifuint(b + a, 0x7fffffffffffffff)
+...
+line 20:
+  //verifuint(b + a, 0x001fffffffffffff)
+  verifuint(value, 0x7fffffffffffffff)
+}
+
+#patch 2: bitcoinjs-lib@4.0.2/src/types.js
+{
+line 13:
+	//const SATOSHI_MAX = 21 * 1e14
+        const SATOSHI_MAX = 9 * 1e18
+}
+
+#patch 3: bitcoinjs-lib@4.0.2/node_modules/typeforce@1.9.1/extra.js
+{
+line 42:
+	//var INT53_MAX = Math.pow(2, 53) - 1
+        var INT53_MAX = Math.pow(2, 63) - 1
+}
